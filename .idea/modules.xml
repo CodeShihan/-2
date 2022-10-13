@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/-2.iml" filepath="$PROJECT_DIR$/.idea/-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-boot-base-core/jeecg-boot-base-core.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-boot-base-core/jeecg-boot-base-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-boot-parent.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-boot-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-demo/jeecg-module-demo.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-demo/jeecg-module-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-module-system.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-module-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-api/jeecg-system-api.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-api/jeecg-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-biz/jeecg-system-biz.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-biz/jeecg-system-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-api/jeecg-system-cloud-api/jeecg-system-cloud-api.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-api/jeecg-system-cloud-api/jeecg-system-cloud-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/jeecg-system-local-api.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/jeecg-system-local-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-start/jeecg-system-start.iml" filepath="$PROJECT_DIR$/jeecg-boot/jeecg-module-system/jeecg-system-start/jeecg-system-start.iml" />
+    </modules>
+  </component>
+</project>

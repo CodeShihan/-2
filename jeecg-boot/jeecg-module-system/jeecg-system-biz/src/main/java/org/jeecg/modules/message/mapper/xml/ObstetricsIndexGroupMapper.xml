@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.message.mapper.ObstetricsIndexGroupMapper">
+
+
+<!--指标组分页列表-->
+    <select id="listPage" resultType="org.jeecg.modules.message.vo.ObstetricsIndexGroupDTO">
+        select a.id,a.index_group_name,c.crowd_name as ,a.remark,a.index_state
+        from
+        obstetrics_index_group a
+        LEFT JOIN obstetrics_index_gruop_real b ON a.id = b.index_group_id
+        LEFT JOIN obstetrics_crowd c on c.id = b.crowd_id
+        WHERE c.status = 1
+        <if test="crowdIdList != null and crowdIdList.size() > 0">
+            AND a.crowd_ids IN
+            <foreach collection="crowdIdList" index="index" item="groupId" open="(" separator="," close=")">
+                #{crowdIdList}
+            </foreach>
+        </if>
+        <if test="indexGroupName!= null and indexGroupName != ''">
+            AND a.index_group_name = #{indexGroupName}
+        </if>
+        <if test="indexState != null and indexState != ''">
+            AND a.index_state = #{indexState}
+        </if>
+        order by a.create_time desc
+    </select>
+
+
+    <select id="listCopy" resultType="org.jeecg.modules.message.entity.ObstetricsIndexGroup">
+        select a.id,a.index_group_name,a.crowd_ids,a.remark,a.index_state
+        from
+        obstetrics_index_group a
+        LEFT JOIN obstetrics_index_gruop_real b ON a.id = b.index_group_id
+        LEFT JOIN obstetrics_crowd c on c.id = b.crowd_id
+        WHERE c.status = 1
+        <if test="indexGroupName!= null and indexGroupName != ''">
+            AND  a.index_group_name like concat('%',#{indexGroupName},'%')
+        </if>
+
+    </select>
+
+    <select id="countCopy" resultType="java.lang.Integer">
+        select  cout(*)
+        from
+        obstetrics_index_group a
+        LEFT JOIN obstetrics_index_gruop_real b ON a.id = b.index_group_id
+        LEFT JOIN obstetrics_crowd c on c.id = b.crowd_id
+        WHERE c.status = 1
+        <if test="indexGroupName!= null and indexGroupName != ''">
+            AND  a.index_group_name like concat('%',#{indexGroupName},'%')
+        </if>
+    </select>
+</mapper>
